@@ -1,0 +1,15 @@
+# VLM scoring stage only: notebooks/kaggle_notebook/vlm_infer.ipynb.
+# These are the versions the Kaggle runs actually used, taken from the kernel logs
+# ("torch 2.10.0+cu128 cuda True", "loading fp16 across 2 GPUs (31 GB)").
+
+torch==2.10.0+cu128      # CUDA 12.8 build: --index-url https://download.pytorch.org/whl/cu128
+transformers>=4.49       # Qwen2_5_VLForConditionalGeneration; the notebook upgrades itself below this
+accelerate               # needed by device_map="auto"
+pillow
+
+# Only for the 4-bit nf4 fallback, which triggers when total GPU memory is under 30 GB.
+# The fp16 runs that produced our leaderboard scores did not use it.
+bitsandbytes
+
+# Not used anywhere: FlashAttention, xformers, DeepSpeed, vLLM/SGLang, Triton kernels, Apex,
+# and no custom CUDA/C++ extension is compiled at install time.

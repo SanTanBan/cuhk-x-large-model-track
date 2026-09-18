@@ -74,7 +74,9 @@ Nothing shipped on a public-leaderboard hunch. Every change was validated two wa
 CPU pipeline: Windows 11, Python 3.12.7, 4 logical cores (Intel i3-10110U), 8 GB RAM. See
 `requirements.txt` for pinned versions. The VLM stage ran on Kaggle with two NVIDIA T4s (31 GB total) and
 loaded the model in fp16; every run logged `loading fp16 across 2 GPUs (31 GB)`. A single 24 GB card runs the
-same fp16 path, and a single 16 GB card runs the automatic 4-bit fallback.
+same fp16 path, and a single 16 GB card runs the automatic 4-bit fallback. The GPU-side pins are in
+`requirements-gpu.txt`: torch 2.10.0+cu128 (CUDA 12.8) and transformers >= 4.49. No FlashAttention, xformers,
+DeepSpeed, vLLM, Triton kernels or Apex, and nothing is compiled at install time.
 
 ### Steps
 
