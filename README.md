@@ -13,6 +13,9 @@ verification stage.
 
 Everything here is our own code. No answers from other teams are used in the two selected submissions.
 
+Also published on Kaggle as a write-up notebook:
+https://www.kaggle.com/code/santanubanerjee9/cuhk-x-lmt-open-source-solution
+
 ## How the system works
 
 The answer to each question is a weighted sum of independent evidence sources, fused per clip and then
