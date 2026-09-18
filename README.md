@@ -103,7 +103,10 @@ python src/build_session.py submissions/sub18_nbw-lag.csv --emo=norm+sess --w-em
        --base-sub=submissions/sub17_nbw_base.csv
 ```
 
-Step 5 rebuilds `sub18_nbw-lag.csv` (md5 `86e216768efc1198bdd11857e916808d`). `src/build_stack.py` refuses
+Step 5 rebuilds `sub18_nbw-lag.csv` (md5 `86e216768efc1198bdd11857e916808d`). **Verified on 2026-09-18** from
+the VLM scores committed in `vlm/`: step 1 takes 71 s and reproduces `sub17_nbw_base.csv`
+(md5 `d2918a3b844baa5c64c3f158eb4cb2ce`), step 2 takes 42 s and reproduces `sub18_nbw-lag.csv` — 113 s in total
+on 4 CPU cores, with no GPU. `src/build_stack.py` refuses
 to build unless the validation report it reads was accepted on both subject halves, and both steps run
 their own leak guards. Selection 2, `sub17_nbw-emo13e.csv`, is the same action model with the first-order
 emotion decoder (`--emo=norm+sess --w-emo=12 --tau=0.25`).
