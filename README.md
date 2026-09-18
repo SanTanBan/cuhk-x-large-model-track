@@ -25,8 +25,9 @@ decoded under the constraints that hold within a clip and along a recording sess
 2. **Per-clip visual features** (`src/frames.py`, `src/motion.py`, `src/motion2.py`, `src/clip_feats.py`,
    `src/feats.py`). Frame-difference motion statistics from the Depth stream, plus CLIP ViT-B/32
    embeddings of sampled IR frames, PCA-reduced before fusion.
-3. **VLM evidence** (`notebooks/kaggle_notebook/`). Qwen2.5-VL-7B-Instruct, loaded in 4-bit on one Kaggle
-   T4, scores every option letter for each question. The resulting log-probabilities are in `vlm/`, so the
+3. **VLM evidence** (`notebooks/kaggle_notebook/`). Qwen2.5-VL-7B-Instruct in fp16, sharded by `device_map="auto"`
+   across Kaggle's two T4s (31 GB total), scores every option letter for each question. `load_model()` falls
+   back to 4-bit nf4 automatically when total GPU memory is under 30 GB, so one 16 GB card also runs it. The resulting log-probabilities are in `vlm/`, so the
    rest of the pipeline runs without a GPU. Per-group fusion weights were validated on held-out subjects
    (`src/vlm_perweight.py`).
 4. **Organisers' non-visual supplement** (`src/nonvisual_feats.py`, `src/motion_model.py`). A random
@@ -71,7 +72,9 @@ Nothing shipped on a public-leaderboard hunch. Every change was validated two wa
 ### Environment
 
 CPU pipeline: Windows 11, Python 3.12.7, 4 logical cores (Intel i3-10110U), 8 GB RAM. See
-`requirements.txt` for pinned versions. The VLM stage ran on Kaggle with one NVIDIA T4 (16 GB).
+`requirements.txt` for pinned versions. The VLM stage ran on Kaggle with two NVIDIA T4s (31 GB total) and
+loaded the model in fp16; every run logged `loading fp16 across 2 GPUs (31 GB)`. A single 24 GB card runs the
+same fp16 path, and a single 16 GB card runs the automatic 4-bit fallback.
 
 ### Steps
 
@@ -88,7 +91,7 @@ python src/unit_times.py               # -> features/unit_times.csv  (verify: --
 python src/extract_frames.py           # -> frames/ (also the Kaggle dataset for the VLM notebook)
 #    then the per-clip descriptors in src/motion.py, src/motion2.py, src/clip_feats.py, src/feats.py
 
-# 4. VLM evidence: run notebooks/kaggle_notebook/vlm_infer.ipynb on a T4.
+# 4. VLM evidence: run notebooks/kaggle_notebook/vlm_infer.ipynb on a GPU (we used Kaggle's 2x T4).
 #    Skip this to reuse the scores committed in vlm/.
 
 # 5. Final submission = selection 1 (two steps)
