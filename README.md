@@ -124,6 +124,9 @@ model is in `src/best_nb_wide_W_config.json`.
 | `vlm/` | VLM option log-probabilities for train and test clips, so no GPU is needed |
 | `submissions/` | Every submission we made, including both final selections |
 | `docs/TECHNICAL_RECORD.md` | Full technical record: what worked, what was rejected, and why |
+| `docs/DECISIONS.md` | Why the solution looks like this: the decisions that mattered, and every rejected idea |
+| `docs/RESULTS.md` | All 31 submissions with public and private scores |
+| `docs/REPRODUCTION_SURVEY.md` | The answers given in the organisers' environment survey |
 | `docs/STRATEGY_PLAN.md`, `docs/DAILY_LOG.md`, `docs/NOTES_2026-09-13_14.md` | Day-by-day working notes |
 
 ## Not included
@@ -139,3 +142,9 @@ media is republished here:
 - `features/` — the derived feature tables (rebuild with the scripts in step 2 and 3; about 75 MB)
 - Another team's publicly released answer file, which earlier blend experiments referenced. It is not part
   of either selected submission.
+
+## Licence
+
+The dataset belongs to the organisers and is not redistributed here (CUHK-X License v2.0). The code is
+published for the challenge's verification stage; no separate open-source licence is attached, so default
+copyright applies.
