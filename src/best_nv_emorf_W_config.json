@@ -1,0 +1,46 @@
+{
+ "config": {
+  "CUHKX_EMO": "imu",
+  "CUHKX_CLF_EMO": "rf"
+ },
+ "base": "src/best_struct4_W.json",
+ "groups": {
+  "emotion": {
+   "keys": [
+    "w_mot_emotion"
+   ],
+   "categories": [
+    "emotion|HAU"
+   ],
+   "held_out_gains": [
+    0.005203841067218676,
+    0.0130113218169359
+   ],
+   "accepted": true,
+   "weights_old": {
+    "w_mot_emotion": 2
+   },
+   "weights_new": {
+    "w_mot_emotion": 8
+   },
+   "acc_all_old": {
+    "emotion|HAU|seq": 0.38636363636363635,
+    "emotion|HAU|noseq": 0.4111776447105788
+   },
+   "acc_all_new": {
+    "emotion|HAU|seq": 0.44805194805194803,
+    "emotion|HAU|noseq": 0.45109780439121755
+   }
+  }
+ },
+ "final_weights": {
+  "w_mot_emotion": 8
+ },
+ "allowed_categories": [
+  "emotion|HAU"
+ ],
+ "build_env": {
+  "CUHKX_EMO": "imu",
+  "CUHKX_CLF_EMO": "rf"
+ }
+}

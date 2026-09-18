@@ -1,0 +1,57 @@
+{
+ "base": "src/best_struct_W.json",
+ "groups": {
+  "vseq": {
+   "keys": [
+    "w_vlm_pair",
+    "w_gen"
+   ],
+   "categories": [
+    "sequence|HAU"
+   ],
+   "held_out_gains": [
+    0.0,
+    0.0
+   ],
+   "accepted": false,
+   "fitted_per_half": [
+    {
+     "w_vlm_pair": 0,
+     "w_gen": 0
+    },
+    {
+     "w_vlm_pair": 0,
+     "w_gen": 0
+    }
+   ]
+  },
+  "vpres": {
+   "keys": [
+    "w_vlm_pres",
+    "thr_m"
+   ],
+   "categories": [
+    "multi|HAU",
+    "single|HAU"
+   ],
+   "held_out_gains": [
+    0.0,
+    0.0
+   ],
+   "accepted": false,
+   "fitted_per_half": [
+    {
+     "w_vlm_pres": 0,
+     "thr_m": -2
+    },
+    {
+     "w_vlm_pres": 0,
+     "thr_m": -2
+    }
+   ]
+  }
+ },
+ "final_groups": [],
+ "allowed_categories": [],
+ "final_weights": {}
+}

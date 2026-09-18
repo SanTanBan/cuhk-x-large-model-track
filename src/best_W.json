@@ -1,0 +1,6 @@
+{
+ "single_known": 8.0,
+ "comb_known": 4.0,
+ "multi_known": 0.5,
+ "multi_thr": 0.25
+}

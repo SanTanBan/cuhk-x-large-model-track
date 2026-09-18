@@ -1,0 +1,28 @@
+{
+ "held_out_gains": [
+  0.3137254901960784,
+  0.10322580645161289
+ ],
+ "fitted_per_half": [
+  {
+   "w_prec": 3,
+   "w_seq": 1
+  },
+  {
+   "w_prec": 1,
+   "w_seq": 0.25
+  }
+ ],
+ "accepted": true,
+ "final": {
+  "w_prec": 1,
+  "w_seq": 0.25
+ },
+ "seq_exact_all": [
+  0.275974025974026,
+  0.4902597402597403
+ ],
+ "allowed_categories": [
+  "sequence|HAU"
+ ]
+}

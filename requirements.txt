@@ -1,0 +1,15 @@
+# CPU pipeline (features, models, fusion, session decoding, submission build).
+# Versions are the ones the final submissions were built with.
+numpy==2.4.6
+pandas==3.0.3
+scikit-learn==1.7.2
+scipy==1.17.1
+opencv-python==5.0.0
+torch==2.14.0          # CPU build; used for CLIP features
+transformers==5.16.1
+kaggle==2.2.4
+
+# GPU stage (Kaggle notebook, NVIDIA T4 16 GB): Qwen/Qwen2.5-VL-7B-Instruct loaded in 4-bit.
+# Provided by the Kaggle image; listed here for completeness.
+#   torch, transformers (Qwen2_5_VLForConditionalGeneration, AutoProcessor)
+#   bitsandbytes, accelerate, pillow

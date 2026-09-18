@@ -1,0 +1,41 @@
+{
+ "base": "src/best_nv_final_W.json",
+ "held_out_gains": [
+  0.009664445987308867,
+  0.013129492944725984
+ ],
+ "accepted": true,
+ "rows": [
+  "half 0: old {'thr_m': -1.5} -> 0.5630 | new {'w_nb_comb': 16, 'w_nb_bel': 4, 'thr_m': -1.5} -> 0.5726 | gain +0.0097",
+  "half 1: old {'thr_m': -1.5} -> 0.5684 | new {'w_nb_comb': 16, 'w_nb_bel': 4, 'thr_m': -1.5} -> 0.5815 | gain +0.0131"
+ ],
+ "weights_old": {
+  "thr_m": -1.5
+ },
+ "weights_new": {
+  "w_nb_comb": 16,
+  "w_nb_bel": 4,
+  "thr_m": -1.5
+ },
+ "acc_all_old": {
+  "single|HAU|seq": 0.9642857142857143,
+  "multi|HAU|seq": 0.7954545454545454,
+  "combination|HAU|seq": 0.9383116883116883,
+  "single|HAU|noseq": 0.9500998003992016,
+  "multi|HAU|noseq": 0.8003992015968064,
+  "combination|HAU|noseq": 0.966804979253112
+ },
+ "acc_all_new": {
+  "single|HAU|seq": 0.9675324675324676,
+  "multi|HAU|seq": 0.8084415584415584,
+  "combination|HAU|seq": 0.961038961038961,
+  "single|HAU|noseq": 0.9780439121756487,
+  "multi|HAU|noseq": 0.8203592814371258,
+  "combination|HAU|noseq": 0.979253112033195
+ },
+ "allowed_categories": [
+  "combination|HAU",
+  "single|HAU",
+  "multi|HAU"
+ ]
+}

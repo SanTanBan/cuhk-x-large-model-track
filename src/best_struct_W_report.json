@@ -1,0 +1,96 @@
+{
+ "base": "src/best_vlm_W.json",
+ "groups": {
+  "prec": {
+   "keys": [
+    "w_prec",
+    "w_seq"
+   ],
+   "categories": [
+    "sequence|HAU"
+   ],
+   "held_out_gains": [
+    0.01794031395549422,
+    0.005902942011162614
+   ],
+   "accepted": true,
+   "fitted_per_half": [
+    {
+     "w_prec": 3,
+     "w_seq": 1
+    },
+    {
+     "w_prec": 1,
+     "w_seq": 0.25
+    }
+   ]
+  },
+  "rec_m": {
+   "keys": [
+    "w_rec_m",
+    "w_sgl_m",
+    "thr_m"
+   ],
+   "categories": [
+    "multi|HAU"
+   ],
+   "held_out_gains": [
+    0.0012075211316198153,
+    0.0009947832426957237
+   ],
+   "accepted": true,
+   "fitted_per_half": [
+    {
+     "w_rec_m": 0,
+     "w_sgl_m": 0.5,
+     "thr_m": -2
+    },
+    {
+     "w_rec_m": 0,
+     "w_sgl_m": 0,
+     "thr_m": -2
+    }
+   ]
+  },
+  "rec_s": {
+   "keys": [
+    "w_rec_s"
+   ],
+   "categories": [
+    "single|HAU"
+   ],
+   "held_out_gains": [
+    0.0,
+    0.0
+   ],
+   "accepted": false,
+   "fitted_per_half": [
+    {
+     "w_rec_s": 0
+    },
+    {
+     "w_rec_s": 0
+    }
+   ]
+  }
+ },
+ "combined_held_out_gains": [
+  0.019147835087114012,
+  0.006897725253858317
+ ],
+ "final_groups": [
+  "prec",
+  "rec_m"
+ ],
+ "allowed_categories": [
+  "multi|HAU",
+  "sequence|HAU"
+ ],
+ "final_weights": {
+  "w_prec": 1,
+  "w_seq": 0.25,
+  "w_rec_m": 0,
+  "w_sgl_m": 0.5,
+  "thr_m": -2
+ }
+}

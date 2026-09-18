@@ -1,0 +1,16 @@
+{
+ "build_env": {
+  "CUHKX_EMO": "imu",
+  "CUHKX_CLF_EMO": "rf",
+  "CUHKX_HARN": "skel",
+  "CUHKX_C_HARN": "1",
+  "CUHKX_HARN_UNITS": "1",
+  "CUHKX_NB": "1"
+ },
+ "allowed_categories": [
+  "combination|HAU",
+  "single|HAU",
+  "multi|HAU"
+ ],
+ "base": "src/best_nv_final_W.json"
+}

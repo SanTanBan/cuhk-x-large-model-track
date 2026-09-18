@@ -1,0 +1,211 @@
+{
+ "groups": {
+  "harn": {
+   "keys": [
+    "w_vlm_single_harn"
+   ],
+   "held_out_gains": [
+    0.009004928528657752,
+    0.003456221198156584
+   ],
+   "accepted": true,
+   "categories": [
+    "single|HARn"
+   ],
+   "fitted_per_half": [
+    {
+     "w_vlm_single_harn": 0.5
+    },
+    {
+     "w_vlm_single_harn": 0.5
+    }
+   ]
+  },
+  "single_hau": {
+   "keys": [
+    "w_vlm_single"
+   ],
+   "held_out_gains": [
+    0.0029325513196480912,
+    0.001989566485391281
+   ],
+   "accepted": true,
+   "categories": [
+    "single|HAU"
+   ],
+   "fitted_per_half": [
+    {
+     "w_vlm_single": 0.5
+    },
+    {
+     "w_vlm_single": 1
+    }
+   ]
+  },
+  "comb_noseq": {
+   "keys": [
+    "w_vlm_comb_noseq"
+   ],
+   "held_out_gains": [
+    0.0018134201646049508,
+    0.0030845433087760554
+   ],
+   "accepted": true,
+   "categories": [
+    "combination|HAU",
+    "single|HAU",
+    "multi|HAU"
+   ],
+   "fitted_per_half": [
+    {
+     "w_vlm_comb_noseq": 0.5
+    },
+    {
+     "w_vlm_comb_noseq": 1
+    }
+   ]
+  },
+  "comb_seq": {
+   "keys": [
+    "w_vlm_comb_seq"
+   ],
+   "held_out_gains": [
+    -0.0011212696222184793,
+    0.00036893387569769676
+   ],
+   "accepted": false,
+   "categories": [
+    "combination|HAU",
+    "single|HAU",
+    "multi|HAU"
+   ],
+   "fitted_per_half": [
+    {
+     "w_vlm_comb_seq": 1
+    },
+    {
+     "w_vlm_comb_seq": 0.25
+    }
+   ]
+  },
+  "oi": {
+   "keys": [
+    "w_vlm_oi"
+   ],
+   "held_out_gains": [
+    0.0,
+    0.0
+   ],
+   "accepted": false,
+   "categories": [
+    "object_interaction|HARn"
+   ],
+   "fitted_per_half": [
+    {
+     "w_vlm_oi": 0.5
+    },
+    {
+     "w_vlm_oi": 0.25
+    }
+   ]
+  },
+  "emotion": {
+   "keys": [
+    "w_vlm_emotion"
+   ],
+   "held_out_gains": [
+    0.001811281697429723,
+    0.0006258493669980547
+   ],
+   "accepted": true,
+   "categories": [
+    "emotion|HAU"
+   ],
+   "fitted_per_half": [
+    {
+     "w_vlm_emotion": 0.5
+    },
+    {
+     "w_vlm_emotion": 0.5
+    }
+   ]
+  },
+  "presence": {
+   "keys": [
+    "w_vlm_pres",
+    "thr_m"
+   ],
+   "held_out_gains": [
+    -0.0027887988039791978,
+    -0.0015086142252966894
+   ],
+   "accepted": false,
+   "categories": [
+    "multi|HAU",
+    "single|HAU"
+   ],
+   "fitted_per_half": [
+    {
+     "w_vlm_pres": 0.1,
+     "thr_m": -2
+    },
+    {
+     "w_vlm_pres": 0.25,
+     "thr_m": -2
+    }
+   ]
+  },
+  "sequence": {
+   "keys": [
+    "w_vlm_pair",
+    "w_gen"
+   ],
+   "held_out_gains": [
+    0.0,
+    -0.0022136032541859585
+   ],
+   "accepted": false,
+   "categories": [
+    "sequence|HAU"
+   ],
+   "fitted_per_half": [
+    {
+     "w_vlm_pair": 0,
+     "w_gen": 0
+    },
+    {
+     "w_vlm_pair": 0.25,
+     "w_gen": 0
+    }
+   ]
+  }
+ },
+ "n_questions": 4087,
+ "combined_held_out_gains": [
+  0.016165942276150314,
+  0.008530330992324253
+ ],
+ "final_groups": [
+  "harn",
+  "single_hau",
+  "comb_noseq",
+  "emotion"
+ ],
+ "allowed_categories": [
+  "combination|HAU",
+  "emotion|HAU",
+  "multi|HAU",
+  "single|HARn",
+  "single|HAU"
+ ],
+ "final_vlm_weights": {
+  "w_vlm_single": 0.5,
+  "w_vlm_single_harn": 0.5,
+  "w_vlm_emotion": 0.5,
+  "w_vlm_comb_noseq": 1
+ },
+ "score_all_covered": {
+  "current": 0.7181324136043973,
+  "final": 0.7321552991727621
+ }
+}

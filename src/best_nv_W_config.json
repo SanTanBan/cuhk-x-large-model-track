@@ -1,0 +1,87 @@
+{
+ "config": {
+  "CUHKX_EMO": "imu",
+  "CUHKX_HARN": "skel",
+  "CUHKX_C_EMO": "0.1",
+  "CUHKX_C_HARN": "1",
+  "CUHKX_HARN_UNITS": "1"
+ },
+ "base": "src/best_struct4_W.json",
+ "groups": {
+  "emotion": {
+   "keys": [
+    "w_mot_emotion"
+   ],
+   "categories": [
+    "emotion|HAU"
+   ],
+   "held_out_gains": [
+    0.007820136852394924,
+    0.0042823094014688146
+   ],
+   "accepted": true,
+   "weights_old": {
+    "w_mot_emotion": 2
+   },
+   "weights_new": {
+    "w_mot_emotion": 3
+   },
+   "acc_all_old": {
+    "emotion|HAU|seq": 0.38636363636363635,
+    "emotion|HAU|noseq": 0.4111776447105788
+   },
+   "acc_all_new": {
+    "emotion|HAU|seq": 0.4837662337662338,
+    "emotion|HAU|noseq": 0.4231536926147705
+   }
+  },
+  "harn": {
+   "keys": [
+    "w_mot_harn",
+    "w_mot_oi"
+   ],
+   "categories": [
+    "single|HARn",
+    "object_interaction|HARn"
+   ],
+   "held_out_gains": [
+    0.010922925375498299,
+    0.00866535841068948
+   ],
+   "accepted": true,
+   "weights_old": {
+    "w_mot_harn": 0.25,
+    "w_mot_oi": 3
+   },
+   "weights_new": {
+    "w_mot_harn": 1,
+    "w_mot_oi": 5
+   },
+   "acc_all_old": {
+    "single|HARn|noseq": 0.7785547785547785,
+    "object_interaction|HARn|noseq": 0.8571428571428571
+   },
+   "acc_all_new": {
+    "single|HARn|noseq": 0.8857808857808858,
+    "object_interaction|HARn|noseq": 0.924812030075188
+   }
+  }
+ },
+ "final_weights": {
+  "w_mot_emotion": 3,
+  "w_mot_harn": 1,
+  "w_mot_oi": 5
+ },
+ "allowed_categories": [
+  "emotion|HAU",
+  "object_interaction|HARn",
+  "single|HARn"
+ ],
+ "build_env": {
+  "CUHKX_EMO": "imu",
+  "CUHKX_HARN": "skel",
+  "CUHKX_C_EMO": "0.1",
+  "CUHKX_C_HARN": "1",
+  "CUHKX_HARN_UNITS": "1"
+ }
+}

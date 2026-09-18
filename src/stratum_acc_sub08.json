@@ -1,0 +1,46 @@
+{
+ "combination|HAU|noseq": [
+  0.8962655601659751,
+  482
+ ],
+ "combination|HAU|seq": [
+  0.9577922077922078,
+  308
+ ],
+ "emotion|HAU|noseq": [
+  0.4111776447105788,
+  501
+ ],
+ "emotion|HAU|seq": [
+  0.38636363636363635,
+  308
+ ],
+ "multi|HAU|noseq": [
+  0.7465069860279441,
+  501
+ ],
+ "multi|HAU|seq": [
+  0.7792207792207793,
+  308
+ ],
+ "object_interaction|HARn|noseq": [
+  0.8571428571428571,
+  133
+ ],
+ "sequence|HAU|seq": [
+  0.275974025974026,
+  308
+ ],
+ "single|HARn|noseq": [
+  0.7785547785547785,
+  429
+ ],
+ "single|HAU|noseq": [
+  0.9441117764471058,
+  501
+ ],
+ "single|HAU|seq": [
+  0.9675324675324676,
+  308
+ ]
+}

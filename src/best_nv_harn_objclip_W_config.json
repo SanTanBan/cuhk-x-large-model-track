@@ -1,0 +1,56 @@
+{
+ "config": {
+  "CUHKX_HARN": "skel",
+  "CUHKX_C_HARN": "1",
+  "CUHKX_HARN_UNITS": "1",
+  "CUHKX_OBJ_CLIP": "1"
+ },
+ "base": "src/best_struct4_W.json",
+ "groups": {
+  "harn": {
+   "keys": [
+    "w_mot_harn",
+    "w_mot_oi"
+   ],
+   "categories": [
+    "single|HARn",
+    "object_interaction|HARn"
+   ],
+   "held_out_gains": [
+    0.008221891265296086,
+    0.007855048177628818
+   ],
+   "accepted": true,
+   "weights_old": {
+    "w_mot_harn": 0.25,
+    "w_mot_oi": 3
+   },
+   "weights_new": {
+    "w_mot_harn": 1,
+    "w_mot_oi": 3
+   },
+   "acc_all_old": {
+    "single|HARn|noseq": 0.7785547785547785,
+    "object_interaction|HARn|noseq": 0.8571428571428571
+   },
+   "acc_all_new": {
+    "single|HARn|noseq": 0.8857808857808858,
+    "object_interaction|HARn|noseq": 0.8571428571428571
+   }
+  }
+ },
+ "final_weights": {
+  "w_mot_harn": 1,
+  "w_mot_oi": 3
+ },
+ "allowed_categories": [
+  "object_interaction|HARn",
+  "single|HARn"
+ ],
+ "build_env": {
+  "CUHKX_HARN": "skel",
+  "CUHKX_C_HARN": "1",
+  "CUHKX_HARN_UNITS": "1",
+  "CUHKX_OBJ_CLIP": "1"
+ }
+}

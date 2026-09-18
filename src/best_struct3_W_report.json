@@ -1,0 +1,43 @@
+{
+ "base": "src/best_struct_W.json",
+ "groups": {
+  "route_m": {
+   "keys": [
+    "w_sans_m",
+    "thr_m"
+   ],
+   "categories": [
+    "multi|HAU"
+   ],
+   "held_out_gains": [
+    0.007992639871197721,
+    0.00949975888936827
+   ],
+   "accepted": true,
+   "fitted_per_half": [
+    {
+     "w_sans_m": 10,
+     "thr_m": -2
+    },
+    {
+     "w_sans_m": 10,
+     "thr_m": -2
+    }
+   ]
+  }
+ },
+ "combined_held_out_gains": [
+  0.007992639871197721,
+  0.00949975888936827
+ ],
+ "final_groups": [
+  "route_m"
+ ],
+ "allowed_categories": [
+  "multi|HAU"
+ ],
+ "final_weights": {
+  "w_sans_m": 10,
+  "thr_m": -2
+ }
+}

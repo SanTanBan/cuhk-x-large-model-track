@@ -1,0 +1,21 @@
+{
+ "held_out_gains": [
+  -0.00666666666666671,
+  0.006451612903225823
+ ],
+ "alphas": [
+  0.5,
+  0.5
+ ],
+ "alpha_all": 0.5,
+ "acc_all": [
+  0.4885245901639344,
+  0.4885245901639344
+ ],
+ "accepted": false,
+ "base": "src/best_nv_final_W.json",
+ "regression_mismatch": [
+  0,
+  308
+ ]
+}

@@ -1,0 +1,18 @@
+{
+ "build_env": {
+  "CUHKX_EMO": "imu",
+  "CUHKX_CLF_EMO": "rf"
+ },
+ "allowed_categories": [
+  "emotion|HAU"
+ ],
+ "weights": {
+  "emotion": {
+   "w_mot_emotion": 8
+  }
+ },
+ "sources": {
+  "emo": "src/best_nv_emorf_W_config.json"
+ },
+ "base": "src/best_struct4_W.json"
+}

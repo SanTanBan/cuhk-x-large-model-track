@@ -1,0 +1,28 @@
+{
+ "build_env": {
+  "CUHKX_EMO": "imu",
+  "CUHKX_CLF_EMO": "rf",
+  "CUHKX_HARN": "skel",
+  "CUHKX_C_HARN": "1",
+  "CUHKX_HARN_UNITS": "1"
+ },
+ "allowed_categories": [
+  "emotion|HAU",
+  "object_interaction|HARn",
+  "single|HARn"
+ ],
+ "weights": {
+  "emotion": {
+   "w_mot_emotion": 8
+  },
+  "harn": {
+   "w_mot_harn": 1,
+   "w_mot_oi": 5
+  }
+ },
+ "sources": {
+  "emo": "src/best_nv_emorf_W_config.json",
+  "harn": "src/best_nv_W_config.json"
+ },
+ "base": "src/best_struct4_W.json"
+}

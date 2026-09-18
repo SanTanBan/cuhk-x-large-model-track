@@ -1,0 +1,47 @@
+{
+ "config": {
+  "CUHKX_PRES": "skel",
+  "CUHKX_C_PRES": 0.1
+ },
+ "base": "src/best_nv_final_W.json",
+ "held_out_gains": [
+  -0.00024069636094659064,
+  -0.000357109071989381
+ ],
+ "accepted": false,
+ "rows": [
+  "half 0: old {'w_mot_comb': 1, 'w_mot_bel': 0.1, 'thr_m': -2} -> 0.5621 | new C=0.1 {'w_mot_comb': 2, 'w_mot_bel': 0.1, 'thr_m': -1.5} -> 0.5619 | gain -0.0002",
+  "half 1: old {'w_mot_comb': 0.5, 'w_mot_bel': 0, 'thr_m': -1.5} -> 0.5651 | new C=0.1 {'w_mot_comb': 0.25, 'w_mot_bel': 0.1, 'thr_m': -1.5} -> 0.5648 | gain -0.0004"
+ ],
+ "weights_old": {
+  "w_mot_comb": 1,
+  "w_mot_bel": 0.1,
+  "thr_m": -1.5
+ },
+ "weights_new": {
+  "w_mot_comb": 1,
+  "w_mot_bel": 0.1,
+  "thr_m": -1.5
+ },
+ "acc_all_old": {
+  "single|HAU|seq": 0.9642857142857143,
+  "multi|HAU|seq": 0.7954545454545454,
+  "combination|HAU|seq": 0.9512987012987013,
+  "single|HAU|noseq": 0.9500998003992016,
+  "multi|HAU|noseq": 0.8023952095808383,
+  "combination|HAU|noseq": 0.966804979253112
+ },
+ "acc_all_new": {
+  "single|HAU|seq": 0.9675324675324676,
+  "multi|HAU|seq": 0.7954545454545454,
+  "combination|HAU|seq": 0.9415584415584416,
+  "single|HAU|noseq": 0.9580838323353293,
+  "multi|HAU|noseq": 0.8003992015968064,
+  "combination|HAU|noseq": 0.966804979253112
+ },
+ "allowed_categories": [
+  "combination|HAU",
+  "single|HAU",
+  "multi|HAU"
+ ]
+}

@@ -1,0 +1,9 @@
+# Never publish the organisers' dataset or anything derived from their media.
+data/
+frames/
+kaggle_dataset/
+features/
+public_ref/
+*.mhtml
+__pycache__/
+*.pyc

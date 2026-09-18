@@ -1,0 +1,18 @@
+{
+  "id": "santanubanerjee9/cuhk-x-vlm-tta-harn",
+  "title": "CUHK X VLM TTA HARn",
+  "code_file": "vlm_infer.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_internet": true,
+  "dataset_sources": [
+    "santanubanerjee9/cuhkx-ir-frames"
+  ],
+  "competition_sources": [
+    "cuhk-x-competition-large-model-track"
+  ],
+  "kernel_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
