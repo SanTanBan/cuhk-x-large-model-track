@@ -81,6 +81,16 @@ same fp16 path, and a single 16 GB card runs the automatic 4-bit fallback. The G
 `requirements-gpu.txt`: torch 2.10.0+cu128 (CUDA 12.8) and transformers >= 4.49. No FlashAttention, xformers,
 DeepSpeed, vLLM, Triton kernels or Apex, and nothing is compiled at install time.
 
+### Single entry point
+
+```bash
+bash inference.sh
+```
+
+It checks the inputs, builds any missing feature table, fits every model from `data/training_qa.csv`, fuses the
+VLM evidence, decodes emotion along the recording sessions, and verifies the result against the md5 of the
+submission we selected. About 2 minutes on 4 CPU cores once the features exist, no GPU. The steps it runs are:
+
 ### Steps
 
 ```bash
