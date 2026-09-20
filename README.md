@@ -124,6 +124,13 @@ to build unless the validation report it reads was accepted on both subject halv
 their own leak guards. Selection 2, `sub17_nbw-emo13e.csv`, is the same action model with the first-order
 emotion decoder (`--emo=norm+sess --w-emo=12 --tau=0.25`).
 
+The variant that uses **no recording times at all** (`sub17t_pres-notime.csv`, public 0.79532) rebuilds with a
+single command, verified byte-identical (md5 `de2e915a4a1f2c0f1b9f578f4a4475c7`):
+
+```bash
+CUHKX_EMO=imu CUHKX_CLF_EMO=rf CUHKX_HARN=skel CUHKX_C_HARN=1 CUHKX_HARN_UNITS=1 \n  CUHKX_PRES=imu+skel CUHKX_C_PRES=0.1 \n  python src/make_submission3.py work/notime.csv --clip --weights=src/best_nv_pres_W_imuskel.json
+```
+
 Switches (`CUHKX_EMO`, `CUHKX_HARN`, `CUHKX_NB`, `CUHKX_PRES`, …) are all off by default, and with them
 unset the pipeline reproduces the earlier submission byte for byte. The build environment for the final
 model is in `src/best_nb_wide_W_config.json`.
